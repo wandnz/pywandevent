@@ -7,13 +7,13 @@
 #
 # All rights reserved.
 #
-# This code has been developed by the WAND Network Research Group at the 
-# University of Waikato. For more information, please see 
+# This code has been developed by the WAND Network Research Group at the
+# University of Waikato. For more information, please see
 # http://www.wand.net.nz/
 #
 # This source code is proprietary to the University of Waikato and may not be
 # redistributed, published or disclosed without prior permission from the
-# University of Waikato and the WAND Network Research Group. 
+# University of Waikato and the WAND Network Research Group.
 #
 # Please report any bugs, questions or comments to contact@wand.net.nz
 #
@@ -54,7 +54,7 @@ class PyWandEvent:
         self.monotonic_time = t.tv_sec + t.tv_nsec * 1e-9
 
     def add_timer_event(self, sec, usec, data, callback):
-        
+
         self.get_monotonic_time()
         now = self.monotonic_time
         newtimer = {}
@@ -67,14 +67,14 @@ class PyWandEvent:
 
         self.timerid += 1
 
-        if len(self.timers) == 0: 
+        if len(self.timers) == 0:
             self.timers.append(newtimer)
             return newtimer['id']
 
         # XXX Be careful! The list is in REVERSE chronological order
         ind = 0
         inserted = False
-        
+
         while (ind < len(self.timers)):
             if newtimer['expire'] > self.timers[ind]['expire']:
                 self.timers.insert(ind, newtimer)
@@ -86,9 +86,9 @@ class PyWandEvent:
             self.timers.append(newtimer)
 
         return newtimer['id']
-    
+
     def del_timer_event(self, timerid):
-        
+
         for t in self.timers:
             if t['id'] == timerid:
                 self.timers.remove(t)
@@ -119,11 +119,11 @@ class PyWandEvent:
         self.fd_events[fd] = new_fd_ev
 
     def del_fd_event(self, sock):
-        
+
         fd = sock.fileno()
 
         if not self.fd_events.has_key(fd):
-            print >> sys.stderr, "PyWandEvent: Tried to delete event for fd %d but no event was present!" % (fd) 
+            print >> sys.stderr, "PyWandEvent: Tried to delete event for fd %d but no event was present!" % (fd)
             return
 
         fd_ev = self.fd_events[fd]
@@ -154,10 +154,10 @@ class PyWandEvent:
             while 1:
                 try:
                     if delay == None:
-                        active = select.select(self.read_fds, self.write_fds, 
+                        active = select.select(self.read_fds, self.write_fds,
                                 self.ex_fds)
                     else:
-                        active = select.select(self.read_fds, self.write_fds, 
+                        active = select.select(self.read_fds, self.write_fds,
                             self.ex_fds, delay)
                 except select.error as e:
                     if e[0] == errno.EINTR:
@@ -168,12 +168,12 @@ class PyWandEvent:
 
                 break
 
-            
+
             for fd in active[0]:
                 callback = self.fd_events[fd][3]
-                
+
                 if (self.fd_events[fd][0] & 1) == 1:
-                    callback(fd, 1, self.fd_events[fd][1], 
+                    callback(fd, 1, self.fd_events[fd][1],
                             self.fd_events[fd][2])
                 if (self.fd_events[fd][0] & 2) == 2:
                     callback(fd, 2, self.fd_events[fd][1],
@@ -182,8 +182,5 @@ class PyWandEvent:
                     callback(fd, 4, self.fd_events[fd][1],
                             self.fd_events[fd][2])
 
-                
 
-        
-
-# vim: set sw=4 tabstop=4 softtabstop=4 expandtab :		
+# vim: set sw=4 tabstop=4 softtabstop=4 expandtab :
