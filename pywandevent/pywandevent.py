@@ -1,23 +1,28 @@
-# This file is part of NNTSC
+# Copyright (c) 2013-2017 The University of Waikato, Hamilton, New Zealand.
 #
-# Copyright (C) 2013 The University of Waikato, Hamilton, New Zealand
-# Authors: Shane Alcock
-#          Brendon Jones
-#          Nathan Overall
+# Author: Shane Alcock
 #
 # All rights reserved.
 #
-# This code has been developed by the WAND Network Research Group at the
-# University of Waikato. For more information, please see
-# http://www.wand.net.nz/
+# This file is part of pywandevent
 #
-# This source code is proprietary to the University of Waikato and may not be
-# redistributed, published or disclosed without prior permission from the
-# University of Waikato and the WAND Network Research Group.
+# This code has been developed by the University of Waikato WAND
+# research group. For further information please see http://www.wand.net.nz/
+#
+# pywandevent is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# pywandevent is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 # Please report any bugs, questions or comments to contact@wand.net.nz
-#
-# $Id$
 
 
 import sys,socket,time, ctypes, os, select, errno

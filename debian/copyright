@@ -6,7 +6,7 @@ It was downloaded from:
 
     http://research.wand.net.nz/software/libwandevent.php
 
-Upstream Author(s):
+Upstream Author:
 
     This code has been developed by the University of Waikato WAND research
     group. For further information, please see http://www.wand.net.nz/ or
@@ -14,32 +14,32 @@ Upstream Author(s):
 
 Copyright:
 
-    Pywandevent is Copyright (c) 2009 The University of Waikato, Hamilton,
+    Pywandevent is Copyright (c) 2009-2017 The University of Waikato, Hamilton,
     New Zealand. All rights reserved.
 
 License:
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
     (at your option) any later version.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+    GNU Lesser General Public License for more details.
 
-    You should have received a copy of the GNU General Public License with
-    the Debian GNU/Linux distribution in file /usr/share/common-licenses/GPL;
-    if not, write to the Free Software Foundation, Inc., 59 Temple Place,
-    Suite 330, Boston, MA  02111-1307  USA
+    You should have received a copy of the GNU Lesser General Public License
+    along with this package; if not, write to the Free Software Foundation,
+    Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
-    On Debian systems, the complete text of the GNU General Public
-    License, version 2, can be found in /usr/share/common-licenses/GPL-2.
+    On Debian systems, the complete text of the GNU Lesser General Public
+    License, version 3, can be found in /usr/share/common-licenses/LGPL-3.
 
 The Debian packaging is:
 
-    Copyright (C) 2015 Brendon Jones <brendonj@waikato.ac.nz>
+    Copyright (C) 2015-2017 The University of Waikato, Hamilton, New Zealand.
+    All rights reserved.
 
 and is licensed under the GPL version 2,
 see "/usr/share/common-licenses/GPL-2".
