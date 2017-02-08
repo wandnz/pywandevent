@@ -1,0 +1,38 @@
+Pywandevent -  A handy event-handling environment used by a variety of
+               software developed by the WAND Group at the University of
+               Waikato, New Zealand.
+
+------------------------------------------------------------------------------
+Pywandevent is Copyright (c) 2009-2017 The University of Waikato, Hamilton,
+New Zealand. All rights reserved.
+
+This code has been developed by the University of Waikato WAND research group.
+For further information, please see http://www.wand.net.nz/.
+------------------------------------------------------------------------------
+
+This directory contains source code for pywandevent, a userspace library
+that provides an API for developing event-driven python programs.
+
+The primary idea behind the design of pywandevent is that the user program
+will register an event, providing pywandevent with a function that is to
+be called should that event occur. All of the code to deal with things such
+as select(), timeouts and signal handling is contained within pywandevent,
+leaving the programmer free to concentrate on the details of what their
+program needs to do when the event occurs, rather than checking for the
+occurence of the event.
+
+Events can be registered on:
+        file descriptors (read events, write events or both)
+        timers (N seconds from the time the event was registered)
+        signals (whenever signal X occurs)
+
+We expect that most users of pywandevent are only installing it because it
+is required to use some other piece of WAND software. However, if you wish
+to use it yourself to develop event-driven programs, feel free to do so.
+
+Pywandevent is licensed under the GNU Lesser General Public License (LGPL)
+version 3. Please see the included files COPYING and COPYING.LESSER for
+details of this license.
+
+For further information, please contact the WAND Group - see
+http://www.wand.net.nz/ for details or email contact@wand.net.nz
