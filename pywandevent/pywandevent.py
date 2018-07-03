@@ -158,12 +158,8 @@ class PyWandEvent:
 
             while 1:
                 try:
-                    if delay == None:
-                        active = select.select(self.read_fds, self.write_fds,
-                                self.ex_fds)
-                    else:
-                        active = select.select(self.read_fds, self.write_fds,
-                            self.ex_fds, delay)
+                    active = select.select(self.read_fds, self.write_fds,
+                        self.ex_fds, delay)
                 except select.error as e:
                     if e[0] == errno.EINTR:
                         continue
