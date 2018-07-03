@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 
-import sys
-
-from pkg_resources import Requirement, resource_filename
-
 try:
         from setuptools import setup
 except ImportError:

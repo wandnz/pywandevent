@@ -25,7 +25,7 @@
 # Please report any bugs, questions or comments to contact@wand.net.nz
 
 
-import sys,socket,time, ctypes, os, select, errno
+import sys, ctypes, os, select, errno
 
 class TimeSpec(ctypes.Structure):
     _fields_ = [
