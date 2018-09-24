@@ -9,7 +9,7 @@ Homepage: http://research.wand.net.nz/software/libwandevent.php
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/nntsc.git;a=summary
 
 Package: pywandevent
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: Python implementation of libwandevent
  Libwandevent is a software library that provides an API for developing
