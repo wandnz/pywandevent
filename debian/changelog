@@ -1,3 +1,16 @@
+pywandevent (1.1-1) unstable; urgency=low
+
+  * Update license to LGPL version 3.
+  * Add MANIFEST.in file to make sure copyright files are distributed.
+  * Add basic README file.
+  * Remove unnecessary check against None before calling select().
+  * Remove unused imports.
+  * Change package architecture from "any" to "all".
+  * Fix spelling mistake in package description.
+  * Force using older gzip compression when building package.
+
+ -- Brendon Jones <brendonj@waikato.ac.nz>  Mon, 24 Sep 2018 13:45:48 +1200
+
 pywandevent (1.0-2) unstable; urgency=low
 
   * Move directories around to allow "develop" installs from source.
