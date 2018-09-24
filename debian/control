@@ -23,6 +23,6 @@ Description: Python implementation of libwandevent
  that event occur. All of the code for managing the events and determining
  whether an event has occurred is contained within libwandevent, leaving the
  developer free to concentrate on the events themselves rather than having to
- check for the occurence of the event.
+ check for the occurrence of the event.
  .
  This package provides a python implementation of libwandevent.
