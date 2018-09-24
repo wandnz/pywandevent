@@ -12,3 +12,6 @@
 %:
 	dh $@ --with python2
 
+# lintian and some tools don't like using newer compressed formats
+override_dh_builddeb:
+	dh_builddeb -- -Zgzip
